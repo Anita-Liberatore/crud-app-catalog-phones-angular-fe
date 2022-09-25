@@ -1,0 +1,23 @@
+{
+  "devices": [
+    {
+      "label": "Samsung S9",
+      "price": 499,
+      "os": "android",
+      "desc": "",
+      "rate": 4,
+      "id": 8
+    },
+    {
+      "label": "Samsung S10",
+      "price": 9993,
+      "os": "android",
+      "rate": 4,
+      "id": 9,
+      "desc": ""
+    }
+  ],
+  "login": {
+    "token": 123
+  }
+}
