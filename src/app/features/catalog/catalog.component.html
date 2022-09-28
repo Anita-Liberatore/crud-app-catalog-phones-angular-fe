@@ -1,5 +1,32 @@
+<!--<pre>{{activeDevice | json }}</pre> -->
+
+<form #f="ngForm" (submit)="save(f)">
+    <input class="form-control"
+        type="text"
+        [ngModel]="activeDevice?.label"
+        name="label"
+        required
+        placeholder="Device Model">
+    <input
+        type="number"
+        [ngModel]="activeDevice?.price"
+        name="price"
+        placeholder="Price">
+
+    <div class="btn-group">
+        <button type="submit" class="btn btn-warning">{{activeDevice ? 'EDIT' :
+            'ADD'}}</button>
+        <button type="submit" (click)="reset(f)" *ngIf="activeDevice" class="btn
+            btn-warning">RESET</button>
+    </div>
+</form>
+
+<hr>
+
 <ul class="list-group">
-    <li class="list-group-item" *ngFor="let device of devices">
+    <li class="list-group-item" [ngClass]="{'active': device.id ===
+        activeDevice?.id}" *ngFor="let device of devices"
+        (click)="setActive(device)">
         {{device.label}}
         <div class="pull-right">
             <i class="fa fa-trash" (click)="deleteHandler(device)"></i>
