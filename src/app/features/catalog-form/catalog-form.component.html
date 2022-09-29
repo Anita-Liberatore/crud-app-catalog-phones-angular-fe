@@ -1,0 +1,31 @@
+<form #f="ngForm" (submit)="saveHandler()">
+
+    <input type="text"
+        [ngModel]="activeDevice?.label"
+        name="label"
+        required
+        class="form-control"
+        placeholder="Device model">
+
+    <input type="number"
+        [ngModel]="activeDevice?.price"
+        name="price"
+        class="form-control"
+        placeholder="Price">
+
+    <div class="btn-group">
+        <button class="btn btn-warning"
+            type="submit"
+            [disabled]="f.invalid">
+            {{activeDevice?.id ? 'EDIT' : 'ADD'}}
+        </button>
+
+        <button
+            class="btn btn-light"
+            type="button"
+            *ngIf="activeDevice"
+            (click)="resetHandler();">
+            RESET
+        </button>
+    </div>
+</form>

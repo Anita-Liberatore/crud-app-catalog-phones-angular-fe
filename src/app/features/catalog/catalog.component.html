@@ -1,25 +1,10 @@
 <!--<pre>{{activeDevice | json }}</pre> -->
 
-<form #f="ngForm" (submit)="save(f)">
-    <input class="form-control"
-        type="text"
-        [ngModel]="activeDevice?.label"
-        name="label"
-        required
-        placeholder="Device Model">
-    <input
-        type="number"
-        [ngModel]="activeDevice?.price"
-        name="price"
-        placeholder="Price">
+<app-catalog-form
+    [activeDevice]="activeDevice"
+    (save)="save($event)"
+    (reset)="reset()"></app-catalog-form>
 
-    <div class="btn-group">
-        <button type="submit" class="btn btn-warning">{{activeDevice ? 'EDIT' :
-            'ADD'}}</button>
-        <button type="submit" (click)="reset(f)" *ngIf="activeDevice" class="btn
-            btn-warning">RESET</button>
-    </div>
-</form>
 
 <app-catalog-list
     [devices]="devices"

@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatalogComponent } from './features/catalog/catalog.component';
 import { CatalogListComponent } from './features/catalog-list/catalog-list.component';
+import { CatalogFormComponent } from './features/catalog-form/catalog-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CatalogComponent,
     CatalogListComponent,
+    CatalogFormComponent,
   ],
   imports: [
     BrowserModule,

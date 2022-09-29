@@ -17,5 +17,6 @@ export class CatalogListComponent {
     event.stopPropagation();
     this.delete.emit(device);
   }
+  
 
 }
