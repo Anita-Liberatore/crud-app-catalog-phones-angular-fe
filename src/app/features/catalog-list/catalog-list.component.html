@@ -1,0 +1,11 @@
+<ul class="list-group">
+    <li class="list-group-item"  (click)="setActive.emit(device)" 
+    [ngClass]="{'active': device.id === activeDevice?.id}" 
+    *ngFor="let device of devices"
+    >
+        {{device?.label}}
+        <div class="pull-right">
+            <i class="fa fa-trash" (click)="deleteHandler($event, device)"></i>
+        </div>
+    </li>
+</ul>

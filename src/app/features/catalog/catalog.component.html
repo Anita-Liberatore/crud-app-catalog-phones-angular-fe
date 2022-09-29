@@ -21,16 +21,9 @@
     </div>
 </form>
 
-<hr>
-
-<ul class="list-group">
-    <li class="list-group-item" [ngClass]="{'active': device.id ===
-        activeDevice?.id}" *ngFor="let device of devices"
-        (click)="setActive(device)">
-        {{device.label}}
-        <div class="pull-right">
-            <i class="fa fa-trash" (click)="deleteHandler(device)"></i>
-
-        </div>
-    </li>
-</ul>
+<app-catalog-list
+    [devices]="devices"
+    [activeDevice]="activeDevice"
+    (setActive)="setActive($event)"
+    (delete)="deleteHandler($event)">
+</app-catalog-list>
