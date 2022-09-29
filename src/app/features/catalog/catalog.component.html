@@ -1,14 +1,14 @@
 <!--<pre>{{activeDevice | json }}</pre> -->
 
 <app-catalog-form
-    [activeDevice]="activeDevice"
-    (save)="save($event)"
-    (reset)="reset()"></app-catalog-form>
+    [activeDevice]="catalogStore.activeDevice"
+    (save)="catalogService.save($event)"
+    (reset)="catalogService.reset()"></app-catalog-form>
 
 
 <app-catalog-list
-    [devices]="devices"
-    [activeDevice]="activeDevice"
-    (setActive)="setActive($event)"
-    (delete)="deleteHandler($event)">
+    [devices]="catalogStore.devices"
+    [activeDevice]="catalogStore.activeDevice"
+    (setActive)="catalogService.setActive($event)"
+    (delete)="catalogService.deleteHandler($event)">
 </app-catalog-list>

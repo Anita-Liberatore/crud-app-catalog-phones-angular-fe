@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { CatalogComponent } from './features/catalog/catalog.component';
 import { CatalogListComponent } from './features/catalog-list/catalog-list.component';
 import { CatalogFormComponent } from './features/catalog-form/catalog-form.component';
+import { CatalogService } from './services/catalog.service';
+import { CatalogStore } from './store/catalog.store';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { CatalogFormComponent } from './features/catalog-form/catalog-form.compo
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CatalogService, CatalogStore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
