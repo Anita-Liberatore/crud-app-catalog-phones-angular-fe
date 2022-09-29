@@ -10,6 +10,8 @@ import { CatalogListComponent } from './features/catalog-list/catalog-list.compo
 import { CatalogFormComponent } from './features/catalog-form/catalog-form.component';
 import { CatalogService } from './services/catalog.service';
 import { CatalogStore } from './store/catalog.store';
+import { IconComponent } from './features/icon/icon.component';
+import { CardComponent } from './shared/components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { CatalogStore } from './store/catalog.store';
     CatalogComponent,
     CatalogListComponent,
     CatalogFormComponent,
+    IconComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

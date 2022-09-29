@@ -1,10 +1,15 @@
 <ul class="list-group">
-    <li class="list-group-item"  (click)="setActive.emit(device)" 
-    [ngClass]="{'active': device.id === activeDevice?.id}" 
-    *ngFor="let device of devices"
-    >
+    <li class="list-group-item" (click)="setActive.emit(device)"
+        [ngClass]="{'active': device.id === activeDevice?.id}"
+        *ngFor="let device of devices">
+        
+        <app-icon [os]="device.os"></app-icon>
+
+
         {{device?.label}}
         <div class="pull-right">
+            <span [style.color]="device.price> 500 ? 'red' : null ">{{device.price
+                | number: '1.2-2' }}</span>
             <i class="fa fa-trash" (click)="deleteHandler($event, device)"></i>
         </div>
     </li>

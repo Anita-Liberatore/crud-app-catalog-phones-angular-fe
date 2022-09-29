@@ -15,61 +15,6 @@
       "rate": 4,
       "id": 9,
       "desc": ""
-    },
-    {
-      "label": "okdd",
-      "price": 5,
-      "id": 10
-    },
-    {
-      "label": "sss",
-      "price": 6,
-      "id": 11
-    },
-    {
-      "label": "777",
-      "price": 8,
-      "id": 12
-    },
-    {
-      "label": "55yyyy",
-      "price": 6,
-      "id": 13
-    },
-    {
-      "label": "6666",
-      "price": 66,
-      "id": 14
-    },
-    {
-      "label": "yyyy",
-      "price": 8,
-      "id": 15
-    },
-    {
-      "label": "888",
-      "price": 9,
-      "id": 16
-    },
-    {
-      "label": "888",
-      "price": 8,
-      "id": 17
-    },
-    {
-      "label": "yyyy",
-      "price": 8,
-      "id": 18
-    },
-    {
-      "label": "8888",
-      "price": 888,
-      "id": 19
-    },
-    {
-      "label": "uuu",
-      "price": 8,
-      "id": 20
     }
   ],
   "login": {
