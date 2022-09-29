@@ -12,6 +12,8 @@ import { CatalogService } from './services/catalog.service';
 import { CatalogStore } from './store/catalog.store';
 import { IconComponent } from './features/icon/icon.component';
 import { CardComponent } from './shared/components/card/card.component';
+import { NavbarComponent } from './core/components/navbar/navbar.component';
+import { HomeComponent } from './features/home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { CardComponent } from './shared/components/card/card.component';
     CatalogFormComponent,
     IconComponent,
     CardComponent,
+    NavbarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
